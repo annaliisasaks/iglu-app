@@ -1,6 +1,7 @@
 .sidebar {
     flex: 2 0 0;
-    margin-left:20px;
+    margin:24px 0 0 20px;
+    min-width: 290px;
 }
 @media screen and (max-width: 91em) {
     .sidebar {

@@ -10,7 +10,7 @@
         margin: 24px 16px;
     }
     }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
 .content {
     flex-direction: column;
     margin: 24px 16px;

@@ -6,7 +6,6 @@ interface Props {
 }
 const Search: React.FC<Props> = (props: Props) => {
   const [searchTerm, setSearchTerm] = useState('');
-  // eslint-disable-next-line @typescript-eslint/no-shadow
   const { onButtonClick } = props;
   const handleSubmit = (e: React.MouseEvent):void => {
     e.preventDefault();
