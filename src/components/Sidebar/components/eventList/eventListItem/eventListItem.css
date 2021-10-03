@@ -1,0 +1,43 @@
+.event-list-item {
+    display:flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.event-circle {
+    border: 2px solid #A0F4DC;
+    box-sizing: border-box;
+    border-radius: 64px;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px 20px 10px 0;
+    word-spacing:30px;
+}
+.event-circle-pink {
+    border: 2px solid #FCD3D4;
+}
+.event-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 15px 0 0 0;
+}
+.event-data > span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #696969;
+}
+
+span.event-green {
+    color:#008000;
+}
+span.event-red {
+    color:#FF0000;
+}

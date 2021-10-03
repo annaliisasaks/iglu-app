@@ -1,0 +1,14 @@
+.sidebar {
+    flex: 2 0 0;
+    margin-left:20px;
+}
+@media screen and (max-width: 91em) {
+    .sidebar {
+        margin-left: 8px;
+    }
+    }
+@media screen and (max-width: 375px) {
+    .sidebar {
+        margin-left:0;
+    }
+    }

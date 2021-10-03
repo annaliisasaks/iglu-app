@@ -1,25 +1,16 @@
+.navbar {
+  width:100%;
+  background-color: #3B5BDB;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    margin: 0 auto;
+    max-width: 90em;
     background-color: #3B5BDB;
-  }
-li {
-    float: left;
-  }  
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 24px;
-    line-height:24px;
-    text-decoration: none;
-  }
-  li a:hover, 
-  .active {
-    background-color: #364FC7;
-  }
+}
 
   .burger {
     width: 21px;

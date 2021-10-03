@@ -2,5 +2,19 @@
     color: #fff;
     padding:24px;
     text-decoration: none;
-    
+}
+li {
+    float: left;
+}  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    line-height:24px;
+    text-decoration: none;
+}
+li a:hover, 
+.active {
+    background-color: #364FC7;
 }
