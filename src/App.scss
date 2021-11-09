@@ -1,0 +1,12 @@
+$successColor: #008000;
+$dangerColor: #ff0000;
+
+.text-success {
+    color:$successColor;
+}
+.text-danger {
+    color:$dangerColor;
+}
+.separator{
+    margin: 15px 0; 
+}

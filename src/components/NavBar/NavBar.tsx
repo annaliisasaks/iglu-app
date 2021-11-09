@@ -1,26 +1,47 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
+import List from '../List/List';
 import NavBarItem from './components/NavBarItem/NavBarItem';
 
-import './navBar.css';
+import './navBar.scss';
 
 const menuItems: string[] = ['Home', 'Blog', 'Events', 'Gallery'];
 
 const NavBar: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>('Home');
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const renderNavButton = (opened:boolean): JSX.Element => (
+    opened ? (
+      <div className="cross">
+        <div className="cross__line" />
+        <div className="cross__line" />
+      </div>
+
+    ) : (
+      <div className="burger">
+        <div className="burger__line" />
+        <div className="burger__line" />
+        <div className="burger__line" />
+      </div>
+    )
+  );
 
   return (
-    <div className="navbar">
-      <div className="burger-box" />
-      <input type="checkbox" id="toggle-btn" />
-      <label htmlFor="toggle-btn" className="menu-btn">
-        <div className="burger" />
-        <div className="burger" />
-        <div className="burger" />
-        <p>Menu</p>
-      </label>
+    <header className="header">
+      <nav className="navbar">
+        <button
+          className="navbar__btn"
+          type="button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {renderNavButton(isMenuOpen)}
+          <p>Menu</p>
 
-      <nav>
-        <ul className="navigation">
+        </button>
+
+        <List
+          className={`navbar__navigation ${isMenuOpen ? 'navbar__navigation--open' : ''}`}
+        >
           {menuItems.map((menuItem, index) => (
             <NavBarItem
               key={index}
@@ -29,13 +50,9 @@ const NavBar: React.FC = () => {
               onClick={setSelectedTab}
             />
           ))}
-          <label htmlFor="toggle-btn" className="menu-btn cross">
-            <div className="ham bur" />
-            <div className="bur ger" />
-          </label>
-        </ul>
+        </List>
       </nav>
-    </div>
+    </header>
 
   );
 };

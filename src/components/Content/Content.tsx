@@ -1,12 +1,12 @@
 import React from 'react';
-import Posts from '../Posts/Posts';
-import SideBar from '../Sidebar/SideBar';
+import Main from '../Posts/Main';
+import SideBar2 from '../Sidebar2/SideBar2';
 import './content.css';
 
 const Content: React.FC = () => (
   <div className="content">
-    <Posts />
-    <SideBar />
+    <Main />
+    <SideBar2 />
   </div>
 );
 

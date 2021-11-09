@@ -6,6 +6,9 @@ body {
   background-color:#E9ECEF;
 }
 
-.le-dot {
-    word-spacing: 10px;
+p, ul, ol {
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }

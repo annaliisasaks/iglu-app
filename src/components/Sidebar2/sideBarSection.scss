@@ -1,0 +1,14 @@
+.section__header {
+    font-family: 'Roboto Slab', sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin:0;
+}
+
+@media screen and (max-width: 375px) {
+    .section__header {
+        margin-top: 20px;
+    }
+}

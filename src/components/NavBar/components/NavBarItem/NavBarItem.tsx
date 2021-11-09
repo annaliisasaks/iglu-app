@@ -1,4 +1,5 @@
 import React from 'react';
+import ListItem from '../../../List/ListItem';
 import './navBarItem.css';
 
 interface Props {
@@ -16,15 +17,15 @@ const NavBarItem: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <li>
+    <ListItem className="navbar__item">
       <a
         href="/"
         onClick={handleClick}
-        className={`nav-bar-item ${isActive ? 'active' : ''}`}
+        className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
       >
         {navLink}
       </a>
-    </li>
+    </ListItem>
   );
 };
 

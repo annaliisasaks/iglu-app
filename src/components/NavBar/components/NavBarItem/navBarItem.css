@@ -1,12 +1,4 @@
-.nav-bar-item {
-    color: #fff;
-    padding:24px;
-    text-decoration: none;
-}
-li {
-    float: left;
-}  
-li a {
+.navbar__link {
     display: block;
     color: white;
     text-align: center;
@@ -14,7 +6,7 @@ li a {
     line-height:24px;
     text-decoration: none;
 }
-li a:hover, 
-.active {
+.navbar__link:hover, 
+.navbar__link--active {
     background-color: #364FC7;
 }

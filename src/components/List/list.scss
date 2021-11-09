@@ -1,0 +1,23 @@
+.list--horizontal {
+    display:flex;
+    flex-direction:row;
+}
+.list--vertical {
+  display:flex;
+  flex-direction:column;
+}
+.list--bullets > li:not(:first-child)::before  {
+  content:"•";
+  margin: 0 10px;
+  color: #696969;
+}
+.list--hashtags > li::before  {
+  content:"#";
+  margin-left: 10px;
+  color: #696969;
+}
+.list--hashtags > li:first-child::before  {
+  content:"#";
+  margin-left: 0;
+  color: #696969;
+}
