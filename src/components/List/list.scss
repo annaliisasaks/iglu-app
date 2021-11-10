@@ -6,18 +6,21 @@
   display:flex;
   flex-direction:column;
 }
-.list--bullets > li:not(:first-child)::before  {
-  content:"•";
-  margin: 0 10px;
-  color: #696969;
-}
-.list--hashtags > li::before  {
-  content:"#";
-  margin-left: 10px;
-  color: #696969;
-}
-.list--hashtags > li:first-child::before  {
-  content:"#";
-  margin-left: 0;
-  color: #696969;
+
+.list__item {
+  list-style-type: none;
+  &::before {
+    color: #696969; 
+  }
+  .list--bullets > &:not(:first-child)::before {
+    content:"•";
+    margin: 0 10px;
+  }
+  .list--hashtags > &::before {
+    content:"#";
+    margin-left: 10px;
+  }
+  .list--hashtags > &:first-child::before {
+    margin-left: 0;
+  }
 }

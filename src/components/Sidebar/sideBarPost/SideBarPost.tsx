@@ -2,7 +2,7 @@ import React from 'react';
 import { PostComment } from '../../../data/post/postData';
 import List from '../../List/List';
 import ListItem from '../../List/ListItem';
-import SideBarPostComments from './SideBarPostComments';
+import SideBarPostComments from './SideBarPostComments/SideBarPostComments';
 import './sideBarPost.scss';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   comments: PostComment[];
 }
 
-const SideBarPost: React.FC<Props> = (props) => {
+const SideBarPost = (props:Props):JSX.Element => {
   const { header, comments } = props;
 
   return (

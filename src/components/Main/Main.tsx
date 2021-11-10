@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Search from '../Search/Search';
 import { postsData, Post } from '../../data/post/postData';
-import './main.scss';
 import Article from './Article/Article';
 
-const Main: React.FC = () => {
+const Main = ():JSX.Element => {
   const [query, setQuery] = useState('');
 
   const filterPosts = (postList: Post[], inputValue: string): Post[] => {

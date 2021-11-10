@@ -1,8 +1,6 @@
 .event {
-    margin-bottom:25px;
-}
-.event__item {
     display: flex;
+    margin: 20px 0;
 }
 .event__name {
     font-size: 18px;
@@ -22,31 +20,6 @@
     color: #696969;
     
 }
-.event__date {
-    box-sizing: border-box;
-    border-radius: 64px;
-    width: 64px;
-    height: 64px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin: 10px 20px 10px 0;
-    word-spacing:30px;
-    &--going {
-        border: 2px solid #FCD3D4;
-    }
-    &--regular {
-      border: 2px solid #A0F4DC;  
-    }
-}
-.event__image {
-    box-sizing: border-box;
-    border-radius: 64px;
-    width: 64px;
-    height: 64px;
-    margin: 10px 20px 10px 0;
+.event__image, .event__date {
+    margin-right: 20px;
 }

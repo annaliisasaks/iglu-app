@@ -1,12 +1,15 @@
-$successColor: #008000;
-$dangerColor: #ff0000;
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding:48px 16px 0 16px;
+    max-width: var(--container-width);
+}
 
-.text-success {
-    color:$successColor;
-}
-.text-danger {
-    color:$dangerColor;
-}
-.separator{
-    margin: 15px 0; 
+@media screen and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        padding: 24px 16px;
+    }
 }

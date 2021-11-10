@@ -5,10 +5,20 @@ interface Props {
   className?: string
 }
 
-const ListItem: React.FC<Props> = (props: Props) => {
+const ListItem = (props: Props):JSX.Element => {
   const { children, className } = props;
+
+  const BEM = (): string => {
+    const classArray:string[] = ['list__item'];
+
+    if (className) {
+      classArray.push(className);
+    }
+
+    return classArray.join(' ');
+  };
   return (
-    <li className={className}>
+    <li className={BEM()}>
       {children}
     </li>
   );

@@ -1,46 +1,45 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import List from '../List/List';
-import NavBarItem from './components/NavBarItem/NavBarItem';
+import NavBarItem from './Navbar/NavBarItem';
 
-import './navBar.scss';
+import './header.scss';
 
 const menuItems: string[] = ['Home', 'Blog', 'Events', 'Gallery'];
 
-const NavBar: React.FC = () => {
+const Header = ():JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<string>('Home');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const renderNavButton = (opened:boolean): JSX.Element => (
     opened ? (
-      <div className="cross">
-        <div className="cross__line" />
-        <div className="cross__line" />
-      </div>
+      <span className="cross">
+        <span className="cross__line" />
+        <span className="cross__line" />
+      </span>
 
     ) : (
-      <div className="burger">
-        <div className="burger__line" />
-        <div className="burger__line" />
-        <div className="burger__line" />
-      </div>
+      <span className="burger">
+        <span className="burger__line" />
+        <span className="burger__line" />
+        <span className="burger__line" />
+      </span>
     )
   );
 
   return (
     <header className="header">
-      <nav className="navbar">
+      <nav className="header__nav">
         <button
-          className="navbar__btn"
+          className="header__btn"
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {renderNavButton(isMenuOpen)}
-          <p>Menu</p>
-
+          Menu
         </button>
 
         <List
-          className={`navbar__navigation ${isMenuOpen ? 'navbar__navigation--open' : ''}`}
+          className={`header__nav-list ${isMenuOpen ? 'header__nav-list--open' : ''}`}
         >
           {menuItems.map((menuItem, index) => (
             <NavBarItem
@@ -57,4 +56,4 @@ const NavBar: React.FC = () => {
   );
 };
 
-export default NavBar;
+export default Header;

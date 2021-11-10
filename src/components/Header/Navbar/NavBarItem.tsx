@@ -1,6 +1,6 @@
 import React from 'react';
-import ListItem from '../../../List/ListItem';
-import './navBarItem.css';
+import ListItem from '../../List/ListItem';
+import './navBarItem.scss';
 
 interface Props {
     navLink:string;
@@ -8,7 +8,7 @@ interface Props {
     onClick: (e: string) => void;
 }
 
-const NavBarItem: React.FC<Props> = (props: Props) => {
+const NavBarItem = (props: Props):JSX.Element => {
   const { navLink, isActive = false, onClick } = props;
 
   const handleClick = (e: React.MouseEvent): void => {
@@ -17,11 +17,11 @@ const NavBarItem: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <ListItem className="navbar__item">
+    <ListItem className="header__nav-item">
       <a
         href="/"
         onClick={handleClick}
-        className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
+        className={`header__nav-link ${isActive ? 'header__nav-link--active' : ''}`}
       >
         {navLink}
       </a>

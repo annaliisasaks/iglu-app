@@ -1,11 +1,11 @@
 import React from 'react';
-import { PostComment } from '../../../data/post/postData';
+import { PostComment } from '../../../../data/post/postData';
 
 interface Props {
   comment: PostComment;
 }
 
-const SideBarPostComments: React.FC<Props> = (props) => {
+const SideBarPostComments = (props:Props):JSX.Element => {
   const { comment } = props;
 
   return (

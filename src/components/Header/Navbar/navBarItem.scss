@@ -1,12 +1,11 @@
-.navbar__link {
+.header__nav-link {
     display: block;
     color: white;
     text-align: center;
     padding: 24px;
     line-height:24px;
     text-decoration: none;
-}
-.navbar__link:hover, 
-.navbar__link--active {
-    background-color: #364FC7;
+    &--active, &:hover {
+        background-color: #364FC7;
+    }
 }

@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.scss';
-import NavBar from './components/NavBar/NavBar';
-import Content from './components/Content/Content';
+import './SCSS/Main.scss';
+import NavBar from './components/Header/Header';
+import Main from './components/Main/Main';
+import SideBar from './components/Sidebar/SideBar';
 
-const App: React.FC = () => (
+const App = ():JSX.Element => (
   <div className="App">
     <NavBar />
-    <Content />
+    <div className="content">
+      <Main />
+      <SideBar />
+    </div>
   </div>
 );
 

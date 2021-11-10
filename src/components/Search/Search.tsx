@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './search.css';
+import './search.scss';
 
 interface Props {
     onButtonClick: (value: string) => void;
 }
-const Search: React.FC<Props> = (props: Props) => {
+const Search = (props: Props):JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const { onButtonClick } = props;
   const handleSubmit = (e: React.MouseEvent):void => {

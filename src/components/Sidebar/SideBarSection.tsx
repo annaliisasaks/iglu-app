@@ -3,7 +3,7 @@ import './sideBarSection.scss';
 
 interface Props { heading: string; children: React.ReactNode }
 
-const SideBarSection: React.FC<Props> = (props: Props) => {
+const SideBarSection = (props: Props):JSX.Element => {
   const { heading, children } = props;
 
   return (

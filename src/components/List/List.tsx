@@ -5,27 +5,22 @@ interface Props {
   children: React.ReactNode
   className?: string;
   direction?:'horizontal';
-  bullets?: boolean;
-  hashtags?:boolean;
+  type?:'bullets' | 'hashtags';
 }
 
-const List: React.FC<Props> = (props: Props) => {
+const List = (props: Props):JSX.Element => {
   const {
-    children, className, direction, bullets, hashtags,
+    children, className, direction, type,
   } = props;
 
   const BEM = (): string => {
-    const classArray:string[] = [];
+    const classArray:string[] = ['list'];
 
     if (direction) {
-      classArray?.push(`list--${direction}`);
-      console.log(classArray);
+      classArray.push(`list--${direction}`);
     }
-    if (bullets) {
-      classArray?.push('list--bullets');
-    }
-    if (hashtags) {
-      classArray?.push('list--hashtags');
+    if (type) {
+      classArray.push(`list--${type}`);
     }
     if (className) {
       classArray.push(className);
@@ -34,7 +29,7 @@ const List: React.FC<Props> = (props: Props) => {
     return classArray.join(' ');
   };
   return (
-    <ul className={BEM()} list-direction={direction || 'vertical'} list-bullets={bullets} list-hashtags={hashtags}>
+    <ul className={BEM()}>
       {children}
     </ul>
   );
