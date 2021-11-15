@@ -1,34 +1,25 @@
-form {
-    display: flex;
-    flex-direction: row;
-    height: 48px;;
+.search {
+  display: flex;
+  flex-direction: row;
+  height: 48px;;
 }
-  
-  form.search input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    float: left;
-    width: 100%;
-    background: #fff;
-  }
-  
-  form.search button {
-    
-    width: 64px;
-    background: #3B5BDB;
-    color: white;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
+.search__input {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+.search__button {
+  width: 64px;
+  background: #3B5BDB;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search__button:hover {
+  background: #4c6ae0;
+}
 
-  form.search button:hover {
-    background: #4c6ae0;
-  }
-  
-  form.search::after {
-    content: "";
-    clear: both;
-    display: table;
-  }

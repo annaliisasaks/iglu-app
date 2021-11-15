@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { PostContextProvider } from './Context/PostContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <PostContextProvider>
     <App />
-  </React.StrictMode>,
+  </PostContextProvider>,
   document.getElementById('root'),
 );

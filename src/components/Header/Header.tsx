@@ -4,7 +4,7 @@ import NavBarItem from './Navbar/NavBarItem';
 
 import './header.scss';
 
-const menuItems: string[] = ['Home', 'Blog', 'Events', 'Gallery'];
+const menuItems: string[] = ['Home', 'Blog', 'Events', 'Gallery', 'Add post'];
 
 const Header = ():JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<string>('Home');
@@ -50,7 +50,9 @@ const Header = ():JSX.Element => {
             />
           ))}
         </List>
+
       </nav>
+
     </header>
 
   );

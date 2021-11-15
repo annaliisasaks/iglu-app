@@ -5,11 +5,24 @@
     margin: 0 auto;
     padding:48px 16px 0 16px;
     max-width: var(--container-width);
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+    &--column {
+        flex-direction:column;
+    }
+}
+.separator{
+    margin: 15px 0; 
 }
 
 @media screen and (max-width: 1024px) {
     .content {
         flex-direction: column;
         padding: 24px 16px;
+    }
+    .h1 {
+        font-size:25px;
     }
 }

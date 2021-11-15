@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ListItem from '../../List/ListItem';
 import './navBarItem.scss';
 
@@ -10,21 +11,19 @@ interface Props {
 
 const NavBarItem = (props: Props):JSX.Element => {
   const { navLink, isActive = false, onClick } = props;
-
   const handleClick = (e: React.MouseEvent): void => {
-    e.preventDefault();
     onClick(navLink);
   };
 
   return (
     <ListItem className="header__nav-item">
-      <a
-        href="/"
+      <Link
+        to={`/${navLink.toLowerCase().replace(/\s/g, '')}`}
         onClick={handleClick}
         className={`header__nav-link ${isActive ? 'header__nav-link--active' : ''}`}
       >
         {navLink}
-      </a>
+      </Link>
     </ListItem>
   );
 };

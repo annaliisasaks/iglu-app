@@ -1,18 +1,24 @@
 import React from 'react';
 import './App.scss';
 import './SCSS/Main.scss';
-import NavBar from './components/Header/Header';
-import Main from './components/Main/Main';
-import SideBar from './components/Sidebar/SideBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './components/Pages/Home';
+import AddPost from './components/Pages/AddPost';
 
 const App = ():JSX.Element => (
-  <div className="App">
-    <NavBar />
-    <div className="content">
-      <Main />
-      <SideBar />
+  <BrowserRouter>
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/addpost" element={<AddPost />} />
+      </Routes>
+
     </div>
-  </div>
+
+  </BrowserRouter>
 );
 
 export default App;

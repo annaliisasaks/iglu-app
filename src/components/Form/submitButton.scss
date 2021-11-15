@@ -1,0 +1,12 @@
+.submit-button {
+    background: #3B5BDB;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background: lighten(#3B5BDB, 5%)
+
+    }
+}
+

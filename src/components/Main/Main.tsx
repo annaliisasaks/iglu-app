@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Search from '../Search/Search';
-import { postsData, Post } from '../../data/post/postData';
+import { Post } from '../../data/post/postData';
 import Article from './Article/Article';
+import PostContext from '../../Context/PostContext';
 
 const Main = ():JSX.Element => {
   const [query, setQuery] = useState('');
-
-  const filterPosts = (postList: Post[], inputValue: string): Post[] => {
+  const { posts } = useContext(PostContext);
+  const filterPosts = (inputValue: string): Post[] => {
     if (!inputValue) {
-      return postList;
+      return posts;
     }
-    return postList.filter((post: Post) => post.header.toLowerCase().includes(query.toLowerCase()));
+    return posts.filter((post: Post) => post.header.toLowerCase().includes(query.toLowerCase()));
   };
 
-  const filteredPosts = filterPosts(postsData, query);
+  const filteredPosts = filterPosts(query);
   return (
     <>
       <div className="main">
         <Search onButtonClick={setQuery} />
         {filteredPosts.map((post, index) => <Article post={post} key={index} />)}
+
       </div>
+
     </>
   );
 };
