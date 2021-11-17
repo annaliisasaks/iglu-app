@@ -1,0 +1,27 @@
+.button {
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 5px;
+    &--primary {
+        background: #3B5BDB;
+        &:hover {
+            background: lighten(#3B5BDB, 5%)
+        }
+    }
+    &--secondary {
+        background: #008000;
+        &:hover {
+            background: lighten(#008000, 5%)
+        }
+    }
+    &--delete {
+        background: #FF0000;
+        &:hover {
+            background: lighten(#FF0000, 15%)
+        }
+    }
+}
+

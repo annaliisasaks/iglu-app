@@ -4,25 +4,25 @@ import ListItem from '../../List/ListItem';
 import './navBarItem.scss';
 
 interface Props {
-    navLink:string;
+    navLink:{name: string, path:string};
     isActive?: boolean;
     onClick: (e: string) => void;
 }
 
 const NavBarItem = (props: Props):JSX.Element => {
   const { navLink, isActive = false, onClick } = props;
-  const handleClick = (e: React.MouseEvent): void => {
-    onClick(navLink);
+  const handleClick = (): void => {
+    onClick(navLink.name);
   };
 
   return (
     <ListItem className="header__nav-item">
       <Link
-        to={`/${navLink.toLowerCase().replace(/\s/g, '')}`}
+        to={navLink.path}
         onClick={handleClick}
         className={`header__nav-link ${isActive ? 'header__nav-link--active' : ''}`}
       >
-        {navLink}
+        {navLink.name}
       </Link>
     </ListItem>
   );

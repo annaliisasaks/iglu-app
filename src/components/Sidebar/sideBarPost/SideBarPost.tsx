@@ -17,8 +17,8 @@ const SideBarPost = (props:Props):JSX.Element => {
     <>
       <h4 className="post-data__header">{header}</h4>
       <List className="post-data__list">
-        {comments.map((comment) => (
-          <ListItem className="post-data__content">
+        {comments.map((comment, index) => (
+          <ListItem className="post-data__content" key={index}>
             <SideBarPostComments {...{ comment }} />
           </ListItem>
         ))}

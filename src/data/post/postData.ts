@@ -23,7 +23,7 @@ export const postsData: Post[] = [
   {
     id: 1,
     header: 'Practical Functional Programming',
-    content: 'The following is reformatted from a presentation I gave at LinkedIn last year. The presentation attempted to explain functional programming without using concepts like “monads” or “immutability” or “side effects”. Instead it focuses on how thinking about composition can make you a better programmer, regardless of what language you use.',
+    content: 'The following is reformatted from a presentation I gave at LinkedIn last year. The presentation attempted to explain functional programming without using concepts like “side effects”.',
     author: 'Steven Heidel',
     date: 'Apr 29, 2017',
     tags: ['events', 'programming'],
@@ -41,7 +41,7 @@ export const postsData: Post[] = [
   {
     id: 2,
     header: 'Practical Functional Programming2',
-    content: 'The following is reformatted from a presentation I gave at LinkedIn last year. The presentation attempted to explain functional programming without using concepts like “monads” or “immutability” or “side effects”. Instead it focuses on how thinking about composition can make you a better programmer, regardless of what language you use.',
+    content: 'The following is reformatted from a presentation I gave at LinkedIn last year. The presentation attempted to explain functional programming without using concepts like “side effects”.',
     author: 'Steven Heidel',
     date: 'Apr 29, 2017',
     tags: ['events', 'programming'],

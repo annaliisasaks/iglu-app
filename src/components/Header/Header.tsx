@@ -4,7 +4,16 @@ import NavBarItem from './Navbar/NavBarItem';
 
 import './header.scss';
 
-const menuItems: string[] = ['Home', 'Blog', 'Events', 'Gallery', 'Add post'];
+interface IMenuItems {
+  name: string,
+  path: string,
+}
+const menuItems: IMenuItems[] = [
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'Events', path: '/events' },
+  { name: 'Gallery', path: '/gallery' },
+  { name: 'Add post', path: '/post/add' }];
 
 const Header = ():JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<string>('Home');
@@ -45,7 +54,7 @@ const Header = ():JSX.Element => {
             <NavBarItem
               key={index}
               navLink={menuItem}
-              isActive={selectedTab === menuItem}
+              isActive={selectedTab === menuItem.name}
               onClick={setSelectedTab}
             />
           ))}

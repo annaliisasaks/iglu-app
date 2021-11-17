@@ -15,22 +15,22 @@ const SideBar = ():JSX.Element => {
     <aside className="sidebar">
       <SideBarSection heading="Events">
         <List className="section__list">
-          {eventData.map((event) => <ListItem className="section__list-item"><Event {...event} /></ListItem>)}
+          {eventData.map((event, index) => <ListItem className="section__list-item" key={index}><Event {...event} /></ListItem>)}
         </List>
       </SideBarSection>
       <SideBarSection heading="Birthdays">
         <List className="section__list">
-          {bdData.map((birthday) => <ListItem className="section__list-item"><Event {...birthday} /></ListItem>)}
+          {bdData.map((birthday, index) => <ListItem className="section__list-item" key={index}><Event {...birthday} /></ListItem>)}
         </List>
       </SideBarSection>
       <SideBarSection heading="Newcomers">
         <List className="section__list">
-          {newcomersData.map((newcomer) => <ListItem className="section__list-item"><Event {...newcomer} /></ListItem>)}
+          {newcomersData.map((newcomer, index) => <ListItem className="section__list-item" key={index}><Event {...newcomer} /></ListItem>)}
         </List>
       </SideBarSection>
       <SideBarSection heading="Latest comments">
         <List className="section__list">
-          {posts.map((post) => <ListItem className="section__list-item"><SideBarPost header={post.header} comments={post.comments} /></ListItem>)}
+          {posts.map((post, index) => <ListItem className="section__list-item" key={index}><SideBarPost header={post.header} comments={post.comments} /></ListItem>)}
         </List>
       </SideBarSection>
     </aside>

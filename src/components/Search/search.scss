@@ -3,23 +3,9 @@
   flex-direction: row;
   height: 48px;;
 }
-.search__input {
-  padding: 10px;
-  font-size: 17px;
-  border: none;
-  float: left;
-  width: 100%;
-  background: #fff;
-}
 .search__button {
   width: 64px;
-  background: #3B5BDB;
-  color: white;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-.search__button:hover {
-  background: #4c6ae0;
+  border-radius: 0 5px  5px  0 ;
+  padding:0;
 }
 

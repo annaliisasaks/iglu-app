@@ -1,4 +1,5 @@
 import React from 'react';
+import Separator from '../Separator/Separator';
 import './sideBarSection.scss';
 
 interface Props { heading: string; children: React.ReactNode }
@@ -10,7 +11,7 @@ const SideBarSection = (props: Props):JSX.Element => {
 
     <section className="section">
       <h3 className="section__header">{heading}</h3>
-      <hr className="separator" />
+      <Separator type="div" />
       {children}
     </section>
 

@@ -11,3 +11,13 @@ p, ul, ol {
 * {
   box-sizing: border-box;
 }
+html {
+  overflow-y: scroll;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  cursor: pointer;
+  display:inline;
+}

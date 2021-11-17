@@ -20,7 +20,7 @@ const Event = (props: SideBarData): JSX.Element => {
       <div className="event__info">
         <h4 className="event__name">{name}</h4>
         <List className="event__details" direction="horizontal" type="bullets">
-          {info.map((listItem) => <ListItem>{listItem}</ListItem>)}
+          {info.map((listItem, index) => <ListItem key={index}>{listItem}</ListItem>)}
           {isGoing && <ListItem className="text-success">Going</ListItem>}
           {isTomorrow && <ListItem className="text-danger">Tomorrow</ListItem>}
         </List>

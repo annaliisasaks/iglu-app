@@ -3,17 +3,23 @@ import './App.scss';
 import './SCSS/Main.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Home from './components/Pages/Home';
-import AddPost from './components/Pages/AddPost';
+import HomePage from './Pages/HomePage';
+import AddPostPage from './Pages/AddPostPage';
+import PostDetailsPage from './Pages/PostDetailsPage';
+import GalleryPage from './Pages/GalleryPage';
+import EditPostPage from './Pages/EditPostPage';
 
 const App = ():JSX.Element => (
   <BrowserRouter>
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/addpost" element={<AddPost />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/post/:id" element={<PostDetailsPage />} />
+        <Route path="/post/add" element={<AddPostPage />} />
+        <Route path="/post/edit/:id" element={<EditPostPage />} />
+
       </Routes>
 
     </div>
