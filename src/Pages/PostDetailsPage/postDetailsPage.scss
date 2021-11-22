@@ -13,9 +13,19 @@
     justify-content: space-between;
     }
     &__button {
-        margin: auto 0;
+        margin: auto 0 auto 4px;
         &-wrapper {
             display:flex;
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .post__button{
+        margin:2px 0;
+        &-wrapper {
+            flex-direction: column;
+        }
+    }
+}
+        

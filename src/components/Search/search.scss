@@ -1,11 +1,13 @@
 .search {
   display: flex;
   flex-direction: row;
-  height: 48px;;
+  height: 48px;
+  &__input {
+    width:100%;
+  }
+  &__button {
+    width: 64px;
+    border-radius: 0 5px  5px  0 ;
+    padding:0;
+  }
 }
-.search__button {
-  width: 64px;
-  border-radius: 0 5px  5px  0 ;
-  padding:0;
-}
-

@@ -3,11 +3,11 @@ import './App.scss';
 import './SCSS/Main.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-import HomePage from './Pages/HomePage';
-import AddPostPage from './Pages/AddPostPage';
-import PostDetailsPage from './Pages/PostDetailsPage';
-import GalleryPage from './Pages/GalleryPage';
-import EditPostPage from './Pages/EditPostPage';
+import HomePage from './Pages/HomePage/HomePage';
+import GalleryPage from './Pages/GalleryPage/GalleryPage';
+import AddPostPage from './Pages/AddPostPage/AddPostPage';
+import PostDetailsPage from './Pages/PostDetailsPage/PostDetailsPage';
+import EditPostPage from './Pages/EditPostPage/EditPostPage';
 
 const App = ():JSX.Element => (
   <BrowserRouter>

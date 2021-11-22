@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode,
   className?:string,
   onClick?: (event: React.MouseEvent) => void,
-  type: 'button' | 'submit'
+  type?: 'submit'
   purpose: 'primary' | 'secondary' | 'delete'
 }
 
@@ -29,7 +29,8 @@ const Image = (props: Props):JSX.Element => {
   };
 
   return (
-    <button className={BEM()} type={type === 'button' ? 'button' : 'submit'} onClick={onClick}>{children}</button>
+    // eslint-disable-next-line react/button-has-type
+    <button className={BEM()} type={type || 'button'} onClick={onClick}>{children}</button>
   );
 };
 

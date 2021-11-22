@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
-import Textfield from '../TextField/Textfield';
+import Textfield from '../Input/Textfield';
 import './search.scss';
 
 interface Props {
@@ -16,7 +16,7 @@ const Search = (props: Props):JSX.Element => {
 
   return (
     <form className="search" action="/" method="get">
-      <Textfield className="search__input" type="text" name="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <Textfield className="search__input" type="text" name="search" defaultvalue={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <Button className="search__button" type="submit" purpose="primary" onClick={handleSubmit}>
         <svg
           width="22"
